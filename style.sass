@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:100,200,300,400,500,600,700,800,900")
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900")
+
+$projectGray: #313332
+
+=clear-fix($content: "")
+	&:before,
+	&:after
+		content: $content
+		display: table
+		clear: both
+
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+
+.col
+	float: left
+
+.Container
+	width: 100%
+	margin: 6vw auto
+	text-align: center
+
+/*header*/
+
+.Main-header 
+	.navigation
+		background-color: $projectGray
+		width: 100%
+		height: 11vh
+		color: white
+		position: fixed
+		z-index: 2
+		+clear-fix
+	.logo 
+		height: 11vh
+		margin-left: 18vw
+
+.Menu.-header
+	list-style-type: none
+	float: right
+	margin-right: 11vw
+	.menu-item
+		display: inline-block
+		height: 11vh
+		&:hover
+			background-color: #818382
+	.menu-item
+		.-first-item 
+			color: #00d2ef
+			margin-right: 0.75vw
+	.menu-item
+		.-last-item  
+			margin-left: 0.75vw
+	.menu-link
+		line-height: 11vh
+		padding: 0 1vw
+		display: block
+		text-decoration: none
+		font-weight: bold
+		font-size: 1.51em
+		color: white
+		font-family: "Quicksand", sans-serif
+
+/*hero*/
+
+.Hero 
+	background-image: url("http://magic.wizards.com/sites/mtg/files/images/wallpaper/gOb8lvdMeM_HOU_1280x960_Wallpaper.jpg")
+	height: 70vh
+	background-size: cover
+	.slogan
+		background-color: rgba(0, 0, 0, 0.5)
+		float: right
+		width: 43vw
+		margin-top: 27vh
+		height: 24vh
+		padding: 3.5vh 3vw
+	.slogan-text 
+		text-transform: uppercase
+		font-size: 4.5vh
+		color: white
+		font-weight: normal
+		font-family: 'Raleway', sans-serif
+
+/*feature*/
+
+.Feature 
+	display: inline-block
+	margin: 18vh 0 6vh 0
+	+clear-fix
+	.ikon 
+		width: 8vw
+		height: 8vw
+		font-size: 6vw
+		color: white
+		background-color: $projectGray
+		border-radius: 10%
+		padding: 1vw
+	.ikon.-middle 
+		background-color: #00c7e8
+	.head-text.-ikon.-middle
+		color: #00c7e8
+	.head-text,
+	.text 
+		font-family: "Quicksand", sans-serif
+	.head-text 
+		text-transform: uppercase
+	.text 
+		color: #919191
+		font-size: 1.5em
+		padding: 1vh 2.5vh
+		line-height: 1.5em
+		font-weight: 100
+	.head-text.-footer 
+		font-family: Arial
+		margin-top: 12vh
+		font-size: 2.8em
+		color: $projectGray
+		font-weight: 900
+	.head-text.-ikon 
+		font-size: 1.8em
+		margin-top: 4vh
+		color: #062b31
+		font-weight: 700
+	.row
+		+clear-fix
+
+/*gallery*/
+
+.Gallery 
+	.row
+		+clear-fix
+	.photo 
+		width: 100%
+		height: 100%
+		display: block
+	.col 
+		position: relative
+		z-index: 0
+	.layer 
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: 0
+		transition: background-color 1s
+	.ikon 
+		opacity: 0
+		transition: opacity 1s
+		background-color: white
+		border-radius: 10%
+		padding: 1vh
+		margin-top: 30%
+		margin-left: calc(30% - 20px)
+	.layer
+		&:hover
+			background-color: rgba(0, 0, 0, 0.5)
+			.ikon
+				opacity: 1
+				cursor: pointer
+
+/*workers*/
+
+.Workers 
+	margin: 4% 0 4% 0
+	display: inline-block
+	+clear-fix
+	.row
+		+clear-fix
+	.portrait 
+		width: 85%
+		border-radius: 50%
+		z-index: -1
+		height: 100%
+		display: block
+		margin-left: 7.5%
+	.img-container 
+		position: relative
+		z-index: 0
+	.layer 
+		position: absolute
+		height: 100%
+		z-index: 0
+		border-radius: 50%
+		width: 85%
+		margin-left: 7.5%
+		transition: background-color 1s
+		&:hover
+			background-color: rgba(0, 0, 0, 0.5)
+			.job-title
+				opacity: 1
+
+	.job-title 
+		margin-top: calc(50% - 0.8em)
+		font-size: 2em
+		font-weight: bolder
+		color: #fff
+		z-index: 0
+		opacity: 0
+		transition: opacity 1s
+	.job-title, 
+	.name 
+		font-weight: bolder
+		font-family: "Quicksand", sans-serif
+	.job-title.-two-line 
+		margin-top: calc(50% - 1.6em)
+	.name 
+		color: #636361
+		font-size: 2em
+		margin-top: 10%
+
+/*promotion*/
+
+.Promotion 
+	background-color: gray
+	margin: 6% 0 0 0 
+	padding-top: 15vh
+	+clear-fix
+	.row
+		+clear-fix
+	.photo 
+		width: 66%
+		margin-left: 34%
+		display: block
+	.title 
+		text-transform: uppercase
+		margin: 2vw 0 2vw 5vw
+		font-size: 3em		
+	.title, 
+	.text 
+		color: white	
+		font-family: 'Raleway', sans-serif
+		text-align: left
+	.text 
+		font-size: 1.5em
+		margin-left: 5vw
+	.text.-italic 
+		font-style: italic
+		margin-left: 2.5vw
+
+/*numbers*/
+
+.Data 
+	+clear-fix
+	.row
+		+clear-fix
+	.number 
+		font-size: 6em
+	.number,
+	.text 
+		font-family: 'Raleway', sans-serif	
+		font-weight: bolder
+	.text 
+		text-transform: uppercase
+		color: #13c8e3
+		font-size: 1.5em
+		margin-top: 0.75em
+
+/*footer*/
+
+.Footer 
+	text-align: left
+	margin-bottom: 0
+	background-color: $projectGray
+	padding-top: 4vw
+	+clear-fix
+	.row
+		+clear-fix
+	.title.-main 
+		display: table
+		margin: 0 0.2vw 0 1.8vw
+		text-transform: uppercase
+		font-size: 2.2em
+		font-weight: bold
+		white-space: nowrap
+	.title, 
+	.text
+		color: white
+		font-family: "Quicksand", sans-serif
+	.text 
+		font-size: 1.1em
+		margin: 1vw 1.8vw 0 1.8vw
+	.text.-bold 
+		font-weight: bolder
+	.text.-middle 
+		margin-top: 0
+	.ikon 
+		background-color: #00c7e8
+		font-size: 1.2vw
+		color: white
+		text-align: center
+		width: 2vw
+		height: 2vw
+		padding: 0.4vw
+		margin: 1.5vw 0.4vw
+	.ikon.-first 
+		margin-left: 1.8vw
+	.row.-copyrights 
+		background-color: #252726
+		text-align: center
+		font-weight: normal
+		padding: 1.2vw 0
+	.row.-main
+		padding-bottom: 4vw
+	.underline.-mobile 
+		display: none
+	.underline 
+		width: 100%
+		display: table-cell
+		border: none
+		padding: 0 10% 0 5%
+	.underline:after 
+		content: ''
+		border: 1px solid white
+		width: 100%
+		display: inline-block
+		vertical-align: middle
+	.row.-second-column-main 
+		margin-bottom: 1vw
+
+.col-1 
+	width: 8.33%
+.col-2 
+	width: 16.66%
+.col-25 
+	width: 20.825%
+.col-3 
+	width: 25%
+.col-4 
+	width: 33.33%
+.col-5 
+	width: 41.66%
+.col-6 
+	width: 50%
+.col-7 
+	width: 58.33%
+.col-8 
+	width: 66.66%
+.col-9 
+	width: 75%
+.col-10 
+	width: 83.33%
+.col-11 
+	width: 91.66%
+.col-12 
+	width: 100%
+.col-offset-1 
+	margin-left: 8.33%
+.col-offset-15 
+	margin-left: 12.5%
+.col-offset-2 
+	margin-left: 16.66%
+.col-offset-3 
+	margin-left: 25%
+.col-offset-4 
+	margin-left: 33.33%
+.col-offset-5 
+	margin-left: 41.66%
+.col-offset-6 
+	margin-left: 50%
+.col-offset-7 
+	margin-left: 58.33%
+.col-offset-8 
+	margin-left: 66.66%
+.col-offset-9 
+	margin-left: 75%
+.col-offset-10 
+	margin-left: 83.33%
+.col-offset-11 
+	margin-left: 91.66%
+.col-sm-1 
+	@extend .col-1
+.col-sm-2 
+	@extend .col-2
+.col-sm-25 
+	@extend .col-25
+.col-sm-3 
+	@extend .col-3
+.col-sm-4 
+	@extend .col-4
+.col-sm-5 
+	@extend .col-5
+.col-sm-6 
+	@extend .col-6
+.col-sm-7 
+	@extend .col-7
+.col-sm-8 
+	@extend .col-8
+.col-sm-9 
+	@extend .col-9
+.col-sm-10 
+	@extend .col-10
+.col-sm-11 
+	@extend .col-11
+.col-sm-12 
+	@extend .col-12
+
+@media (max-width: 1200px) 
+	.Main-header 
+		.navigation 
+			height: 31.5vh
+			padding-bottom: 1.5vh
+		.logo 
+			height: 6vh
+			margin-left: 0
+			display: block
+			margin: 0 auto
+	
+	.Menu.-header 
+		float: none
+		margin: 0 auto
+		text-align: center
+		.menu-item 
+			display: block
+			height: 4vh
+			padding: 0.5vh 0
+		.menu-link 
+			line-height: 3vh
+			font-size: 3vh
+	
+	.col 
+		width: 100%
+		margin-left: 0
+	
+	.Feature 
+		.row 
+			margin-left: 0
+	
+	.Gallery 
+		.col 
+			width: 50%
+		.ikon 
+			opacity: 1
+			width: 30%
+			height: 30%
+			margin: 50% 0 0 13.3%
+			padding: 1vw
+		.ikon:before 
+			font-size: 10vw
+			margin: 27.5% 0 0 12.5%
+			display: block
+	
+	.Hero 
+		.slogan-text 
+			font-size: 3vh
+		.slogan 
+			margin-top: 40vh
+			height: 20vh
+			padding: 2vh
+	
+	.Workers 
+		.portrait 
+			width: 40%
+			margin-left: 30%
+		.layer 
+			width: 40%
+			margin-left: 30%
+		.job-title 
+			font-size: 6vw
+			opacity: 1
+			color: black
+		.name 
+			margin: 3% 0 5% 0
+		.job-title.-two-line 
+			margin-top: calc(50% - 9vw)
+	
+	.Promotion 
+		padding: 5vh 0
+		.text.-italic 
+			font-style: italic
+			margin-left: 2.5vw
+			margin-top: 2vw
+		.photo 
+			margin: 0 30%
+			width: 40%
+		.col.-promotion-first 
+			width: 100%
+		.col.-promotion-second 
+			width: 100%
+	
+	.Footer 
+		padding: 0
+		text-align: center
+		.title.-main 
+			margin-top: 5vh
+			font-size: 3em
+			text-align: center
+			display: inline-block
+			text-align: center
+			position: relative
+			background-color: $projectGray
+			padding: 0 15px
+			z-index: 1
+		.text 
+			font-size: 24px
+			line-height: 175%
+		.ikon 
+			font-size: 3vw
+			width: 5vw
+			height: 5vw
+			padding: 1vw
+		.col 
+			position: relative
+		.underline 
+			display: none
+		.underline.-mobile 
+			width: 100%
+			padding: 0
+			padding: 0 5%
+			display: block
+			position: absolute
+			margin-top: -37.5px
+			z-index: 0
+	
+@media (max-device-width: 768px) 
+	.Footer .ikon 
+		font-size: 1vw
+	
